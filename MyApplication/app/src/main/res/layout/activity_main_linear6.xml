@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:background="#ffff77">
+    <!--
+        android:gravity(뷰 안에 표시하는 내용물을 정렬할 때 사용합니다.)
+        TextView의 경우 내용물은 글자가 되고 이미지 뷰의 경우 내용물은 이미지가 됩니다.
+
+        가로물 match_parent로 설정하고, content의 위치를 변경하는 gravity 속성을 적용해 봅니다.
+        android:layout_width="match_parent"
+        android:gravity="left"
+        가로를 wrap_content로 지정하면 버튼 안에 들어 있는 글자에 맞게 뷰의 크기가 결정되므로
+        내부의 여유 공간이 없어집니다. 따라서 gravity 속성을 지정해도 아무런 변화가 없습니다.
+    -->
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Big"
+        android:textColor="#ffff0000"
+        android:textSize="40dp"/>
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Middle"
+        android:textColor="#ff00ff00"
+        android:textSize="30dp"/>
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Small"
+        android:textColor="#ff0000ff"
+        android:textSize="20dp"/>
+</LinearLayout>

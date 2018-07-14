@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--
+        TextView 속성
+            android:text(표시할 텍스트를 지정합니다.)
+            android:textColor(텍스트 색상을 지정합니다.)
+            android:textSize="20sp"(텍스트 크기를 지정합니다.)
+            android:typeface(텍스트 서체를 지정합니다.)
+            android:textStyle(텍스트 스타일을 "bold", "italic", "normal" 중 하나 선택합니다.
+    -->
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World! \n Test sentence1"
+        android:textColor="#ff00ff"
+        android:textSize="20sp"
+        android:typeface="serif"
+        android:textStyle="bold"/>
+
+    <!--
+        android:lineSpacingMultiplier="1.2" (줄 간격으로 기본값은 1 - 현재 텍스트 높이 값 100%)
+        android:letterSpacing="2.0"(글자간격)
+    -->
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:lineSpacingMultiplier="1.2"
+        android:text="사랑합니다."
+        android:letterSpacing="2.0"/>
+
+    <!-- android:autoLink="web|email1" (웹과 메일 주소가 링크로 동작합니다.) -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:autoLink="web|email"
+        android:text="웹 : http://www.google.com \n 메일 : someone@example.com"
+        android:textSize="20sp"/>
+
+    <!--
+        android:ellipsize="end"
+        android:singleLine="true"
+            두 개의 속성이 같이 사용되어야 ellipsize 속성이 동작합니다. (공간부족시 ...으로 나타납니다.)
+
+            ellipsize 속성 지정 예)
+            android:ellipsize="none" 아무 표시 없이 잘라줌
+            android:ellipsize="start" 앞 부분에 글자 줄임표시(...)
+            android:ellipsize="end" 뒷 부분에 글자 줄임표시(...)
+            android:ellipsize="middle" 중간 부분에 글자 줄임표시(...)
+    -->
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="긴 문장입니다. 공간이 부족하면 생략 표시가 되는지 확인합시다"
+        android:textSize="24sp"/>
+
+    <!--
+        android:drawablePadding (텍스트와 그림 사이에 여백을 줍니다. 기본값은 0dp)
+        android:drawableTop (텍스트의 위쪽에 그림을 표시합니다.)
+    -->
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="4dp"
+        android:drawableTop="@mipmap/ic_launcher"
+        android:text="앱 아이콘 입니다..." />
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+    <!--
+        sp(Scale-Independent Pixel : 스케일 독립적 픽셀)로 안드로이드 시스템 전체의 글꼴 크기를
+            설정에서 증강하면 그에 맞게 크기가 증강한다는 차이가 있습니다.
+
+            예제의 경우
+            설정 - 시스템 - [디스플레이] - [고급] - [글꼴크기]를 크거나 작게 선택하면
+            dp의 경우 출력 변화가 없지만 sp의 경우 변경됩니다.
+            글꼴 크기를 축소(확대)하면 dp는 변화가 없지만 sp는 글꼴 크기가 축소(확대)됩니다.
+    -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="첫 번째 텍스트(24dp)"
+        android:textSize="24dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="두 번째 텍스트(24sp)"
+        android:textSize="24sp"/>
+</LinearLayout>

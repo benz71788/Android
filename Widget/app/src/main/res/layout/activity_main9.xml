@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--
+        별의 개수로 평점을 입력받을 때 사용합니다.
+        android:numStars="5" (표시할 별의 갯수를 지정합니다.)
+        android:rating="3" (기본 평점을 지정합니다.)
+        android:stepSize="0.5" (스텝 크기를 지정합니다.)
+        별 5개를 출력하되 별 3개가 선택된 상태로 시작합니다.
+        스템 크기가 0.5이므로 화면을 터치하면 평점을 1/2씩 증감할 수 있습니다.
+    -->
+    <RatingBar
+        android:id="@+id/ratingVote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:rating="3"
+        android:stepSize="0.5"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnDec"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:onClick="mOnClick"
+            android:text="-"/>
+        <Button
+            android:id="@+id/btnInc"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:onClick="mOnClick"
+            android:text="+"/>
+        <Button
+            android:id="@+id/btnResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="mOnClick"
+            android:text="투표 결과는"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    격자 내부의 셀에 자식 뷰를 배치하는 뷰 그룹입니다.
+    개념적으로 테이블 레이아웃과 비슷하지만 각각의 자식 뷰가 자신의 위치와 차지하는
+    셀의 갯수를 독립적으로 지정할 수 있습니다.
+    전체 행과 열의 개수는 그리드 레이아웃 자체의 rowCount="행개수", columnCount="열개수" 속성을
+    사용하여 지정하며 별도로 지정하지 않으면 자동으로 결정됩니다.
+
+    android:columnCount="3" (행의 갯수)
+    android:rowCount="3" (열의 갯수)
+    layout_column="0" (각 자식 뷰는 시작 열 번호를 지정)
+    layout_row="0" (각 자식 뷰는 시작 행 번호를 지정)
+    android:layout_columnSpan="3" (자식 뷰가 차지하는 열의 개수)
+
+    각각의 자식 뷰는 폭과 넓이를 지정할 수 없으며 값은 항상 wrap_content 입니다.
+-->
+<!-- 세 개의 열을 갖는 GridLayout -->
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="3">
+
+    <!--
+        android:layout_column="0", android:layout_row="0
+            => 현재 격자 위치(0,0)
+        android:layout_columnSpan="3" (세 개의 열을 차지)
+        android:layout_gravity="center_horizontal" (가로 중앙 정렬)
+    -->
+
+    <TextView
+        android:layout_column="0"
+        android:layout_columnSpan="3"
+        android:layout_gravity="center_horizontal"
+        android:layout_row="0"
+        android:text="비밀 번호 변경"
+        android:textSize="24sp"/>
+
+    <!--
+        android:layout_column="0", android:layout_row="1"
+            => 현재 격자 위치(1,0)
+        android:layout_columnSpan="3" (세 개의 열을 차지)
+        android:layout_gravity="center_horizontal" (가로 중앙 정렬)
+    -->
+
+    <TextView
+        android:layout_column="0"
+        android:layout_columnSpan="3"
+        android:layout_gravity="center_horizontal"
+        android:layout_row="1"
+        android:text="[기존/새] 비밀 번호를 입력하십시오."
+        android:textSize="16sp"/>
+
+    <!-- 현재 격자 위치(2, 0) -->
+    <TextView
+        android:layout_gravity="right"
+        android:text="기존 비밀 번호:"/>
+
+    <!-- 현재 격자 위치(2, 1) -->
+    <EditText
+        android:ems="10"
+        android:inputType="textPassword"/>
+
+    <!-- 현재 격자 위치(3, 0)
+        android:layout_column="0" 지정했으므로 한 줄 아래로 내려와서 (3, 0)에 배치됩니다. -->
+    <TextView
+        android:layout_column="0"
+        android:layout_gravity="right"
+        android:text="새 비밀 번호"/>
+
+    <!-- 현재 격자 위치(3, 1) -->
+    <EditText
+        android:ems="10"
+        android:inputType="textPassword"/>
+
+    <!-- 현재 격자 위치(4, 1) -->
+    <EditText
+        android:layout_column="1"
+        android:ems="10"
+        android:inputType="textPassword"/>
+</GridLayout>

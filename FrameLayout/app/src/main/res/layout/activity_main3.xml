@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"/>
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/image1"
+        android:text="렐러티브 레이아웃 연습"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="-2dp"
+        android:hint="아무거나 입력해 보십시오."/>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit1"
+        android:layout_alignParentRight="true"
+        android:text="Cancel"/>
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit1"
+        android:layout_toLeftOf="@+id/button1"
+        android:text="OK"/>
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/button2"
+        android:layout_alignParentBottom="true"
+        android:background="#ffff00"/>
+
+    <!--
+        RelativeLayout은 자식 뷰를 부모뷰나 형제 뷰를 기준으로 상대적인 위치를 주어 배치하는 뷰 그룹입니다.
+        자식 뷰의 기본 위치는 부모 뷰의 좌측 상단입니다.
+        부모 뷰를 기준으로 위치를 지정할 때는 자식 뷰의 속성 이름으로
+        layout_alignParent 또는 layout_center~ 형태를 사용하며
+        속성값으로 "true" 또는 "false"를 지정합니다.
+
+        *** 부모 뷰를 기준으로 자식 뷰의 위치 지정 ***
+        android:layout_alignParentTop="true" (부모 뷰의 윗면과 자식뷰의 윗면을 일치시킵니다.)
+        android:layout_alignParentLeft="true" (부모 뷰의 왼쪽 면과 자식뷰의 왼쪽 면을 일치시킵니다.)
+        andriod:layout_alignParentRight="true" (부모 뷰의 오른쪽 면과 자식뷰의 오른쪽 면을 일치시킵니다.)
+        andriod:layout_alignParentBottom="true" (부모 뷰의 아랫 면과 자식뷰의 아랫 면을 일치시킵니다.)
+
+        android:layout_centerHorizontal="true" (부모 영역 내에서 수평으로 중앙에 자식 뷰를 배치합니다.)
+        android:layout_centerVertical="true" (부모 영역 내에서 수직으로 중앙에 자식 뷰를 배치합니다.)
+        android:layout_centerInParent="true" (부모 영역 내 정중앙에 자식 뷰를 배치합니다.)
+
+        *** 형제 뷰를 기준으로 자식 뷰의 위치 지정 ***
+        형제 뷰를 기준으로 위치를 지정할 때 자식 뷰의 속성 이름은 layout_to(Left|Right)Of 또는
+        layout_(below|above) 형태로 사용합니다.
+
+        <TextView>
+        android:layout_toRightOf="@+id/image1"
+        => 앵커(자식 뷰의 위치 지정시 기준이 되는 형제 뷰를 안드로이드에서는 앵커라는 합니다.)의
+            오른쪽에 자식 뷰를 배치합니다.
+            즉, ImageView 오른쪽에 TextView를 위치합니다.
+
+        <EditText>
+        android:layout_below="@+id/image1"
+        => 앵커(자식 뷰의 위치 지정시 기준이 되는 형제 뷰를 안드로이드에서는 앵커라고 합니다.)의
+            아랫쪽에 자식 뷰를 배치합니다.
+            즉, ImageView 아래에 EditText를 위치합니다.
+
+        <Button : cancel>
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/edit1"
+        => cancel 버튼을 EditText 아래쪽에 자식뷰를 배치하고
+            부모 뷰의 오른쪽 면과 자식 뷰의 오른쪽 면을 일치 시킵니다.
+
+        <Button : ok>
+        android:layout_toLeftOf="@+id/button1" => 앵커의 왼쪽에 자식 뷰를 배치합니다.
+
+        <View>
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/button2"
+        => 부모 뷰의 아랫 면과 자식 뷰의 아랫 면을 일치 시킵니다.
+        => OK 버튼 아래쪽에 배치합니다.
+    -->
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    android:background="@drawable/background"
+        => @drawable/background는 res/drawable/background.jpg로 접근합니다.
+            자바코드에서는 "R.drawable.파일명"으로 접근합니다.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="mOnClick1"
+        android:text="첫 번째 그림 숨기기" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="mOnClick2"
+        android:text="첫 번째 그림 없애기" />
+
+    <!--
+        @+id/imagePic1 : 새로운 식별자를 지금 추가해서 사용한다는 의미입니다.
+        @id/imagePic1 : 기존의 식별자를 사용한다는 의미입니다.
+    -->
+
+    <ImageView
+        android:id="@+id/imagePic1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon1"/>
+
+    <ImageView
+        android:id="@+id/imagePic2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon2"/>
+
+</LinearLayout>

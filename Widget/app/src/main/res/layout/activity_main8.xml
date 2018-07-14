@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--
+        ProgressBar(직업의 진행 상황을 회전 바퀴나 수평 막대로 알려줍니다.
+        기본 모양은 회전 바퀴인데 수평 막대로 표시하려면 style 속성을 부여해야 합니다.
+        수평 막대는 최대 두 개의 진행값을 보여 줄 수 있으며
+        각각 기본 진행값과 2차 진행값이라고 합니다.
+    -->
+
+    <ProgressBar
+        android:id="@+id/progStatusCircle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--
+        android:max="120" (최대값을 지정하지 않으면 기본값은 100입니다.)
+        android:progress (기본 진행값을 지정합니다.)
+        android:secondaryProgress (2차 진행값을 지정합니다. - 버퍼링 상태(동영상 재생))
+    -->
+    <ProgressBar
+        android:id="@+id/progStatus"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="120"
+        android:progress="60"
+        android:secondaryProgress="90"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnDecrease1"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:onClick="mOnClick"
+            android:text="-"/>
+        <Button
+            android:id="@+id/btnIncrease1"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:onClick="mOnClick"
+            android:text="+"/>
+        <Button
+            android:id="@+id/btnDecrease2"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:onClick="mOnClick"
+            android:text="-"
+            android:textColor="#0000ff"/>
+        <Button
+            android:id="@+id/btnIncrease2"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:onClick="mOnClick"
+            android:text="+"
+            android:textColor="#0000ff"/>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--
+        EditText는 텍스트를 편집할 수 있도록 TextView의 기본속성을 변경한 것입니다.
+        android:hint(텍스트가 비어 있을 때 대신 표시할 텍스트를 의미합니다.)
+        android:lines="4" (EditText의 높이를 줄 수로 지정합니다.)
+    -->
+    <!--
+        <requestFocus/>
+        (키 입력을 최우선으로 받고 싶은 것이 있으면 requestFocus 엘리먼트를 자식으로 포함하면 됩니다.)
+     -->
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="4"
+        android:hint="아무거나 입력하세요"/>
+
+    <!--
+        android:maxLength(입력 가능한 최대 글자수)
+        android:inputType(입력 텍스트 형식을 지정합니다.)
+    -->
+
+    <EditText
+        android:id="@+id/editPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="숫자 암호 입력"
+        android:inputType="numberPassword"
+        android:maxLength="10">
+        <requestFocus/>
+    </EditText>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="암호는?"
+        android:onClick="mOnClick"/>
+</LinearLayout>

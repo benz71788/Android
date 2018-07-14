@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutMain"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--
+        RadioButton은 여러 옵션 중 하나만을 선택해야 할 때 사용합니다.
+        그룹에 속한 라디오 버튼 중 하나를 선택하면 나머지 라디오 버튼을
+        자동으로 선택 해제됩니다.
+    -->
+    <RadioGroup
+        android:id="@+id/groupColor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/radioRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="mOnClick"
+            android:text="Red"/>
+        <RadioButton
+            android:id="@+id/radioGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="mOnClick"
+            android:text="Green"/>
+        <RadioButton
+            android:id = "@+id/radioBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="mOnClick"
+            android:text="Blue"/>
+    </RadioGroup>
+</LinearLayout>

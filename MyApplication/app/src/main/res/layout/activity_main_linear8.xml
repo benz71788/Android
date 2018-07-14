@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff77">
+    <!--
+        android:alpha="0.5" => 투명도를 나타냅니다.(0-1)
+                                0(완전 투명 -> 안보입니다.) - 1(완전 불투명 - 보입니다. 기본값)
+                                메서드 : setAlpha(float)
+
+        android:focusable="false" => 뷰가 키를 입력을 받을 수 있는지를 true 또는 false로 지정합니다.
+                                     false이면 키 입력을 할 수 없습니다.
+                                     메서드 : setFocusable(boolean)
+        android:rotation="-20" => 뷰의 각도를 (degree)단위로 지정합니다.
+                                  양수값은 시계 방향이고 음수값은 반시계 방향입니다.
+    -->
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"
+        android:text="알파 속성 사용" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:hint="focusable 속성 없음"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="focusable 속성 있음"/>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="mOnClick"
+        android:text="onClick 속성 사용" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="-20"
+        android:text="rotation 속성 있음" />
+
+</LinearLayout>
